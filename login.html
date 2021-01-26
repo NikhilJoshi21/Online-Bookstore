@@ -1,0 +1,106 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login page</title>
+  <style type="text/css">
+	  body{
+	  
+	  background-color: #A3E4D7;
+	  }
+	  .login-page {
+	  width: 360px;
+	  padding: 8% 0 0;
+	  margin-top: -90px;
+	  margin-left: auto;
+	  margin-right: auto;
+	}
+	.form {
+	
+	  position: relative;
+	  z-index: 1;
+	  background: #FFFFFF;
+	  max-width: 360px;
+	  margin: 0 auto 100px;
+	  padding: 45px;
+	  text-align: center;
+	  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+	}
+  
+    #uname, #pass {
+      
+      padding: 12px 20px;
+      margin:8px 0;
+      display: block;
+      border:1px solid #ccc;
+      box-sizing:border-box; 
+	  border-radius: 25px;
+	  margin-left: auto;
+      margin-right: auto;
+    }
+    #logo {
+      width: 40%;
+      height 40%;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+	 
+    }
+    .container {
+      padding: 16px;
+    }
+     #login, #reg{
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+	  border-radius: 25px;
+	  margin-left: auto;
+      margin-right: auto;
+      display: block;
+	  width: 90%;
+	  
+	 
+    }
+    #login:hover,#reg:hover{
+      opacity: 0.8;
+    }
+    #new{
+      text-align: center;
+    }
+    
+  </style>
+  <script type="text/javascript">
+    function checkDetails(){
+      var x= document.getElementById('uname').value;
+      var y= document.getElementById('pass').value;
+      if (x == "" || y == "")
+      {
+        alert ("Enter credentials");
+        return false;
+      }
+    }
+  </script>
+</head> 
+<body>
+<div class="login-page">
+<div class= "form">
+  <form  action="login.php" method="post" >
+    <div><img src="logo.png" id="logo"></div>
+    <div class="container">
+      <input type="text" placeholder="Enter Username" name="username" id="uname" ><br>
+      <input type="password" placeholder="Enter Password" name="password" id="pass"><br>
+      <input type="submit" value="Login" id="login" onclick=" return checkDetails()" ></input><br>
+      <p id="new"><b>New user?</b><br>
+      <input type="submit" value="Register" id="reg" formaction ="registration.html" method="post"></input>
+    </div>
+  </form>
+  </div>
+  </div>
+</body>
+</html>
